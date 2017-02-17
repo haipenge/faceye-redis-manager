@@ -19,7 +19,6 @@
      http://www.springframework.org/schema/cache/spring-cache.xsd
      http://www.springframework.org/schema/data/jpa
     http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
-    
 	<import resource="classpath*:/conf/applicationContext-config.xml" />
 	<import resource="classpath*:/conf/applicationContext-cache.xml" />
 	<import resource="classpath*:/conf/applicationContext-redis.xml" />
