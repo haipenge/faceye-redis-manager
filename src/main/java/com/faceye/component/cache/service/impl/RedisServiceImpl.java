@@ -38,11 +38,11 @@ public class RedisServiceImpl<K , V> implements RedisService<K, V> {
 	 * haipenge@gmail.com
 	 * 2014年4月13日
 	 */
-	public void rPush(K key, V value) throws ServiceException {
+	public void rPush(K key, V value)  {
 		this.getRedisTemplate().boundListOps(key).rightPush(value);
 	}
 
-	public void rPush(K key, List<V> values) throws ServiceException {
+	public void rPush(K key, List<V> values)  {
 		if (key != null && CollectionUtils.isNotEmpty(values)) {
 			for (V value : values) {
 				this.rPush(key, value);
@@ -50,7 +50,7 @@ public class RedisServiceImpl<K , V> implements RedisService<K, V> {
 		}
 	}
 
-	public List<V> getList(K key) throws ServiceException {
+	public List<V> getList(K key){
 		List res = null;
 		res = this.getRedisTemplate().boundListOps(key).range(0, -1);
 		return res;
