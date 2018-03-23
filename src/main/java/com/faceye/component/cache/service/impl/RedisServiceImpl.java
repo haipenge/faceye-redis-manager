@@ -10,7 +10,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import com.faceye.component.cache.service.RedisService;
-import com.faceye.feature.util.ServiceException;
+ 
 
 
 /**
@@ -33,7 +33,7 @@ public class RedisServiceImpl<K , V> implements RedisService<K, V> {
 	 * @todo
 	 * @param key
 	 * @param value
-	 * @throws ServiceException
+	 * @ 
 	 * @author:@haipenge
 	 * haipenge@gmail.com
 	 * 2014年4月13日

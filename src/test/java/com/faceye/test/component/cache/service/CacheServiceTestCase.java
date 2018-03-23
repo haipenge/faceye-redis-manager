@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.util.Assert;
+import org.junit.Assert;
 
 import com.faceye.component.cache.service.CacheService;
 
@@ -23,11 +23,11 @@ public class CacheServiceTestCase {
 	@Test
 	public void testGetUsers() throws Exception{
 		//List users=this.cacheService.getUsers();
-		//Assert.isTrue(CollectionUtils.isNotEmpty(users));
+		//Assert.assertTrue(CollectionUtils.isNotEmpty(users));
 	}
 	@Test
 	public void testGetUser() throws Exception{
 		//Map user= this.cacheService.getUser("a");
-		//Assert.isTrue(MapUtils.isNotEmpty(user));
+		//Assert.assertTrue(MapUtils.isNotEmpty(user));
 	}
 }
