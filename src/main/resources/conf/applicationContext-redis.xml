@@ -5,6 +5,7 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:redis="http://www.springframework.org/schema/redis"
 	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:c="http://www.springframework.org/schema/c"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans  
     http://www.springframework.org/schema/beans/spring-beans.xsd  
     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd  
@@ -18,11 +19,13 @@
 		/> <property name="testOnBorrow" value="${redis.pool.testOnBorrow}" /> </bean> -->
 	<cache:annotation-driven cache-manager="cacheManager"
 		proxy-target-class="true" mode="proxy" />
+		<!--  c:template-ref="redisTemplate" -->
 	<bean id="cacheManager" class="org.springframework.data.redis.cache.RedisCacheManager">
+		
 		<constructor-arg>
 			<ref bean="redisTemplate" />
 		</constructor-arg>
-		<!-- 默认过期时间300s -->
+		
 		<property name="defaultExpiration">
 			<value>${redis.cache.valid.time}</value>
 		</property>
