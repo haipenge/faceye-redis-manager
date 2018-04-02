@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.util.Assert;
+import org.junit.Assert;
 
 import com.faceye.component.cache.service.CacheExampleService;
 
@@ -21,6 +21,6 @@ public class CacheExampleServiceTestCase {
 	@Test
 	public void testGetUsers() throws Exception {
 		List users = this.cacheExampleService.getUsers();
-		Assert.isTrue(CollectionUtils.isNotEmpty(users));
+		Assert.assertTrue(CollectionUtils.isNotEmpty(users));
 	}
 }

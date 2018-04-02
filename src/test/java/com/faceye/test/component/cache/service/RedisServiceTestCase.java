@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.util.Assert;
+import org.junit.Assert;
 
 import com.faceye.component.cache.service.RedisService;
 
@@ -37,7 +37,7 @@ public class RedisServiceTestCase {
 	public void testGetKeys() throws Exception {
 		Set<String> keys = redisService.getKeys("*");
 		SetObject o = (SetObject)this.redisService.get("t");
-		Assert.isTrue(null != keys && keys.size() > 0);
+		Assert.assertTrue(null != keys && keys.size() > 0);
 	}
 
 	@Test
@@ -46,20 +46,20 @@ public class RedisServiceTestCase {
 		values.add(setObject);
 		this.redisService.set(key, values);
 		List set = (List)this.redisService.get(key);
-		Assert.isTrue(set != null);
+		Assert.assertTrue(set != null);
 	}
 
 	@Test
 	public void testSetWithTimeout() throws Exception {
 		this.redisService.set(key, setObject, 30, TimeUnit.SECONDS);
 		SetObject set = (SetObject)this.redisService.get(key);
-		Assert.isTrue(set != null);
+		Assert.assertTrue(set != null);
 	}
 
 	@Test
 	public void testDelete() throws Exception{
 		this.redisService.delete(key);
-		Assert.isTrue(null==this.redisService.get(key));
+		Assert.assertTrue(null==this.redisService.get(key));
 	}
 
 }

@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.springframework.data.redis.core.RedisTemplate;
 
-import com.faceye.feature.util.ServiceException;
+ 
 
 /**
  * Redis 基础服务
@@ -32,7 +32,7 @@ public interface RedisService<K, V> {
 	 * @todo
 	 * @param key
 	 * @param values
-	 * @throws ServiceException
+	 * @ 
 	 * @author:@haipenge
 	 * haipenge@gmail.com
 	 * 2014年4月13日
@@ -44,7 +44,7 @@ public interface RedisService<K, V> {
 	 * @todo
 	 * @param key
 	 * @param value
-	 * @throws ServiceException
+	 * @ 
 	 * @author:@haipenge
 	 * haipenge@gmail.com
 	 * 2014年4月13日
@@ -56,7 +56,7 @@ public interface RedisService<K, V> {
 	 * @todo
 	 * @param key
 	 * @return
-	 * @throws ServiceException
+	 * @ 
 	 * @author:@haipenge
 	 * haipenge@gmail.com
 	 * 2014年4月13日
@@ -68,7 +68,7 @@ public interface RedisService<K, V> {
 	 * @todo
 	 * @param key
 	 * @param value
-	 * @throws ServiceException
+	 * @ 
 	 * @author:@haipenge
 	 * haipenge@gmail.com
 	 * 2014年4月13日
@@ -93,7 +93,7 @@ public interface RedisService<K, V> {
 	 * @todo
 	 * @param key
 	 * @return
-	 * @throws ServiceException
+	 * @ 
 	 * @author:@haipenge
 	 * haipenge@gmail.com
 	 * 2014年4月13日
@@ -105,7 +105,7 @@ public interface RedisService<K, V> {
 	 * @todo
 	 * @param key
 	 * @return
-	 * @throws ServiceException
+	 * @ 
 	 * @author:@haipenge
 	 * haipenge@gmail.com
 	 * 2014年4月14日
@@ -117,7 +117,7 @@ public interface RedisService<K, V> {
 	 * @todo
 	 * @param pattern
 	 * @return
-	 * @throws ServiceException
+	 * @ 
 	 * @author:@haipenge
 	 * haipenge@gmail.com
 	 * 2014年4月14日
@@ -128,7 +128,7 @@ public interface RedisService<K, V> {
 	 * 清除缓存
 	 * @todo
 	 * @param key
-	 * @throws ServiceException
+	 * @ 
 	 * @author:@haipenge
 	 * haipenge@gmail.com
 	 * 2014年5月7日
